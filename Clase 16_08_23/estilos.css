@@ -1,0 +1,21 @@
+p {
+    background-color: rgba(21, 0, 255, 0.838);
+    color: rgba(6, 0, 0, 0.842);
+    border: 8px dotted black;
+    margin: 15px 30px 11px 60px;
+    padding: 70px 50px 10px 10px;
+    text-align: justify;
+}
+
+.resaltado {
+
+    font-weight: bolder;
+    color: red;
+    visibility: hidden;
+}
+
+#diferente  {
+    background-color: yellow;
+    color: black;
+    width: 300px;
+}
