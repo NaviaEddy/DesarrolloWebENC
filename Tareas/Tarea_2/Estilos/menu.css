@@ -1,0 +1,47 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(50deg, blue, black, white);
+    background-size: 300% 600%;
+}
+
+h1{
+    color: aquamarine;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+nav.vertical{
+    width: auto;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav.vertical a{
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+}
+
+
+nav.vertical li a:hover{
+    color: skyblue;
+}
+
+.logo_univ{
+    margin-right: 64%;
+    position: relative;
+    top: -370px;
+    left: 10px;
+}
+
+.logo_ht_cs{
+    margin-right: 82%;
+    position: relative;
+    top: -610px;
+    left: 1080px;
+}
