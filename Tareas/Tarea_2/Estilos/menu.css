@@ -13,6 +13,9 @@ h1{
 }
 
 nav.vertical{
+    margin: 40%;
+    margin-top: 30px;
+    margin-block-end: auto;
     width: auto;
     height: 550px;
     display: flex;
