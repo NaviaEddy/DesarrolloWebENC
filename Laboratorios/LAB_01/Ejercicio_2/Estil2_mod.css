@@ -1,0 +1,46 @@
+.encabezado{
+    background-color: coral;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container1{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+}
+
+.menu1{
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+    justify-content: flex-start;
+}
+
+.menu2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 800px;
+    justify-content: flex-end;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+}
+
+.v1{
+    margin-left: 50px;
+    padding-right: 150px;
+}
+
+.pie{
+    background-color: blue;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
+}
