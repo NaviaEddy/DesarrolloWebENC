@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Tablero de Damas</title>
+</head>
+<body>
+    <h1>Tablero</h1>
+    <form action="tablero.php" method="post">
+        <label for="filas">Numero de Filas:</label>
+        <input type="number" name="filas" required><br><br>
+
+        <label for="columnas">Numero de Columnas:</label>
+        <input type="number" name="columnas" required><br><br>
+
+        <label for="color">Color:</label>
+        <select name="color" required>
+            <option value="white">Blanco</option>
+            <option value="black">Negro</option>
+            <option value="blue">Azul</option>
+            <option value="red">Rojo</option>
+            <option value="green">Verde</option>
+        </select><br><br>
+
+        <input type="submit" value="Generar Tablero">
+    </form>
+</body>
+</html>
