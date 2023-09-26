@@ -9,13 +9,12 @@
 
 <body>
 
-    <div class="title_1">
-        <h1>CONVERSOR DE UNIDADES</h1>
-    </div>
-
 
     <form action="resultado.php" method="post">
         <div class="container_0">
+            <div class="title_1">
+                <h1>CONVERSOR DE UNIDADES</h1>
+            </div>
             <div class="label_1">
                 <label for="numero">Numero:</label>
                 <input type="number" name="numero" required>
@@ -41,10 +40,11 @@
                     <option value="km">km</option>
                 </select>
             </div>
+            <div>
+                <input type="submit" name="Convertir" class="button_1">
+            </div>
         </div>
-        <div>
-            <input type="submit" name="Convertir" class="button_1">
-        </div>
+
     </form>
 
 
@@ -54,7 +54,14 @@
 <style>
     .container_0 {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        background-color: grey;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        margin: 350px;
+        margin-top: 10%;
+        border: 2px solid black;
     }
 </style>
 

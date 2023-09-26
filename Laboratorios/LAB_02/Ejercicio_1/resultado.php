@@ -46,6 +46,7 @@
         background-color: gray;
         color: white;
         width: 5%;
+        
     }
 </style>
 

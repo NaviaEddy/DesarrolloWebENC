@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container_1" style="display: flex; flex-direction: column; text-align: center;">
+        <h1>EJERCICIO 2</h1>
+        <h2>Realizar un programa en javascript que permita calcular el factorial de un numero
+            introducido mediante promps, utilizar funciones</h2>
+    </div>
+</body>
+<script>
+    
+    function Factorial(a) {
+        if (a === 0 || a === 1) {
+            return 1;
+        } else {
+            return a * Factorial(a - 1);
+        }
+    }
+
+    var a = parseInt(prompt("Introduce un número para calcular su factorial:"));
+
+    if (a < 0) {
+        alert("El numero no puede ser negativo.");
+    } else {
+        var factorial = Factorial(a);
+        alert(`El factorial de ${a} es ${factorial}`);
+    }
+
+</script>
+
+</html>

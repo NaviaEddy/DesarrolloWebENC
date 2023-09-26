@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container_1" style="display: flex; flex-direction: column; text-align: center;">
+        <h1>EJERCICIO 1</h1>
+        <h2>Realizar un programa para calcular el mayor y el menor de tres números, solicite
+            mediante prompts los números e imprima el mayor y el menor</h2>
+    </div>
+</body>
+<script>
+    var a = parseInt(prompt("Ingresa el primer número:"));
+    var b = parseInt(prompt("Ingresa el segundo número:"));
+    var c = parseInt(prompt("Ingresa el tercer número:"));
+
+    var mayor, menor;
+
+    if (a >= b && a >= c) {
+        mayor = a;
+    } else if (b >= a && b >= c) {
+        mayor = b;
+    } else {
+        mayor = c;
+    }
+
+    if (a <= b && a <= c) {
+        menor = a;
+    } else if (b <= a && b <= c) {
+        menor = b;
+    } else {
+        menor = c;
+    }
+
+    alert("El número mayor es: " + mayor);
+    alert("El número menor es: " + menor);
+
+</script>
+
+</html>
