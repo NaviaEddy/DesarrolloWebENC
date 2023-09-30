@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 900px;
+    min-height: 100px;
+    border: 1px solid black;
+    background-color: #95B3D7;
+}
+
+.content_1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+}
+
+.carreras{
+    display: flex;  
+    justify-content: center;
+    text-align: center; 
+    width: 910px;
+    min-height: 35px;
+}
+
+.carr_1{
+    background-color: #FFC000;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 450px;
+}
+
+.carr_2{
+    background-color: #0070C0;
+    border-right: 1px solid black;
+    width: 450px;
+}
+
+.content_2{
+    display: flex;
+    background-color: #404040;
+    width: 890px;
+    justify-content: space-between;
+    padding: 5px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.text_2{
+    display: flex;
+    align-items: center;
+    color: #FFC000;
+    font-size: 20px;
+}
+
+.link_1, .link_2, .link_3{
+    display: flex;
+    align-items: center;
+    background-color: #C60000;
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+}
+
+.link_1 a, .link_2 a, .link_3 a{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.content_3{
+    display: flex;
+    background-color: #D9D9D9;
+    border-top: 1px solid black;
+    min-height: 300px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 119px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.nav li{
+    list-style: none;
+    margin: 10px;
+}
+
+.nav a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+}
+
+.informacion{
+    background-color: #D9D9D9;
+    width: 779px;
+    border-right: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 70px;
+    left: 100px;
+    width: 600px;
+    height: 150px;
+    background-color: #404040;
+    color: #FFC000;
+    font-size: 20px;
+}
+
+.footer{
+    width: 901px;
+    background-color: #C0504D;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container_1">
+        <div class="text">
+            <h1>Introduzca dos cadenas</h1>
+        </div>
+        
+        <form action="cadena.php" method="post">
+            <div class="content">
+                <label for="cadena1">Cadena 1:</label>
+                <input type="text" name="cadena1"><br><br>
+    
+                <label for="cadena2">Cadena 2:</label>
+                <input type="text" name="cadena2"><br><br>
+    
+                <input type="submit" class="button_1" value="Comprobar">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container_1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: aquamarine;
+        position: relative;
+        top: 200px;
+        margin-left: 500px;
+        margin-right: 500px;
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    .button_1{
+        position: relative;
+        left: 100px;
+    }
+</style>
+
+</html>
+

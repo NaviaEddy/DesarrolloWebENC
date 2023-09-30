@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <h1 style="color: black;">Calculadora</h1>
+        </div>
+        <div class="text2">
+            <form action="operaciones.php" method="GET">
+                <div class="label">
+
+                    <label for="numero1">Numero 1:</label>
+                    <input type="number" name="numero1"><br>
+                </div>
+
+                <div class="label">
+                    <label for="numero2">Numero 2:</label>
+                    <input type="number" name="numero2"><br>
+                </div>
+
+                <div class="label">
+                    <label>Operacion:</label>
+                    <select name="operacion">
+                        <option value="sumar">Sumar</option>
+                        <option value="restar">Restar</option>
+                        <option value="multiplicar">Multiplicar</option>
+                        <option value="dividir">Dividir</option>
+                    </select><br>
+
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Calcular">
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    .body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(98, 98, 98);
+        position: relative;
+        top: 150px;
+        margin-left: 500px;
+        margin-right: 500px;
+        border: 2px solid black;
+        color: white;
+    }
+
+    .label {
+        margin-bottom: 15px;
+    }
+
+    .button {
+        position: relative;
+        left: 120px;
+        margin-bottom: 40px;
+    }
+</style>

@@ -1,0 +1,38 @@
+.container_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_text{
+    width: 120px;
+    margin: 5px;
+}
+
+#text_1{
+    position: relative;
+    left: 33px;
+}
+
+.button_1{
+    margin: 10px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, tr, td {
+    border: 1.5px solid black;
+}
+
+tr, td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:first-child,
+td:first-child {
+    background-color: gray;
+}

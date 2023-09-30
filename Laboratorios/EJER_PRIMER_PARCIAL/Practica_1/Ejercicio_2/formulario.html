@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost/DesarrolloWebENC/Laboratorios/EJER_PRIMER_PARCIAL/Practica_1/Ejercicio_2/styles_2.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: red;">EJERCICIO 2</h1>
+    <h2>Solicitar mediante formularios filas y columnas luego llamar a la página tabla.php que 
+        genera una tabla con la cantidad de filas +1 y columnas +1 y en cada intersección  de fila
+        con columna, excepto la primera fila y la primera columna donde deben estar los números
+        de fila y columna con negrita y de color gris, el valor de la multiplicación</h2>
+
+    <div class="container_1">
+        <form class="Formulario" action="tabla.php" method="post">
+            <label for="filas">Ingresa el numero de filas: </label>
+            <input type="text" class="input_text" name="filas" id="text_1" required><br>
+            <label for="columnas">Ingresa el numreo de columnas:</label>
+            <input type="text" class="input_text" name="columnas" required> 
+            <input type="submit" class="button_1" value="Enviar">
+        </form>
+    </div>
+    
+    
+</body>
+</html>

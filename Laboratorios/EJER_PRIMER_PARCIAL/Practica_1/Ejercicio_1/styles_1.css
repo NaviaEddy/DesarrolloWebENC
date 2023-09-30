@@ -1,0 +1,91 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(95, 95, 95);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    background-color: rgb(87, 141, 177);
+    text-align: center;
+    height: 200px;
+    width: 900px;
+    border: 2px solid black;
+    line-height: 0.1;
+}
+
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+}
+
+.subtitulo h2{
+    position: relative;
+    right: 75px;
+}
+
+.subtitulo h3{
+    position: relative;
+    left: 75px;
+}
+
+.container_0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+    
+}
+
+.contenido{
+    margin-left: 50px;
+}
+
+.image{
+    position: relative;
+    top: -35px;
+}
+
+.container_1{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu{
+    background-color: rgba(32, 32, 32, 0.575);
+    width: 119px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-top: none;
+    border-right: none;
+}
+
+.nav li{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(228, 228, 228);
+    width: 100px;
+    height: 30px;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    background-color: rgb(202, 202, 202);
+    border: 2px solid black;
+    border-top: none;
+    width: 760px;
+    padding: 10px;
+}
