@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
         echo "<td>";
             echo "<div class='container_1'>";
                 echo "<div class='button_1'>";
-                    echo "<a href='editar_habitaciones.php?id=$row[id]'>Editar</a>";
+                    echo "<a href='editar_habitaciones.php?id=$row[id]&id2=$row[id_tipo_habitacion]'>Editar</a>";
                 echo "</div>";
                 echo "<div class='button_1'>";
                     echo "<a href='eliminar_habitaciones.php?id= $row[id];'>Eliminar</a>";
