@@ -9,7 +9,7 @@ $result=$con->query($sql);
 if ($result->num_rows > 0) {
 
     while ($row = $result->fetch_assoc()) {
-        echo "<img src='http://localhost/DesarrolloWebENC/Laboratorios/LAB_03/Ej2/imagenes/$row[fotografia]' width='300px' >";
+        echo "<img src='http://localhost/DesarrolloWebENC/Tareas/TareaLab3/Ej2/imagenes/$row[fotografia]' width='300px' >";
     }
     echo "<form action='ingresar_fotografias.php' method='post' enctype='multipart/form-data'>";
     echo "<div>";
