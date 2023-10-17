@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+ 
+        <label for="">Numero 1</label>
+        <input type="number" id="n1"/>
+        <label for="">Numero 2</label>
+        <input type="number" id="n2" />
+        <label for="">Numero 3</label>
+        <input type="number" id="n3" />
+        <input type="submit" onclick="calcular()" value="calcular"/>
+        
+
+    <script>
+
+        function calcular() {
+          let n1 = parseInt(document.getElementById("n1").value);
+          let n2 = parseInt(document.getElementById("n2").value);
+          let n3 = parseInt(document.getElementById("n3").value);
+           if (n1 >= n2 && n1 >= n3) {
+            document.getElementById("n1").style.backgroundColor="red";
+            document.getElementById("n2").style.backgroundColor="white";
+            document.getElementById("n3").style.backgroundColor="white";
+          } else {
+            if (n2 >= n1 && n2 > n3) {
+                document.getElementById("n2").style.backgroundColor="red";
+                document.getElementById("n1").style.backgroundColor="white";
+                document.getElementById("n3").style.backgroundColor="white";
+            } else {
+                document.getElementById("n3").style.backgroundColor="red";
+                document.getElementById("n1").style.backgroundColor="white";
+                document.getElementById("n2").style.backgroundColor="white";
+            }
+          }
+        } 
+    
+      </script>
+  </body>
+</html>

@@ -16,7 +16,7 @@ foreach ($_FILES as $key => $file){
     echo "</pre>";*/
     $id_fotos = $_POST["id_fotos_$key[11]"];
     
-    if($file['error'] === 0){
+    if($file['error'] === 0 ){
 
         $archivo_original = $_FILES[$key]['name'];
         $arreglo = explode(".", $archivo_original);
