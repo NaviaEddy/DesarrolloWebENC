@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+
+<body>
+    <div class="container_0">
+        <div class="password">
+            <label>Password</label>
+            <input type="password" id="password">
+            <button id="ver" onclick="mostrar()">Mostrar</button>
+        </div>
+
+
+        <div class="teclado">
+            <table class="table">
+                <tr>
+                    <td onclick="escribir(this)" name="1">1</td>
+                    <td onclick="escribir(this)" name="2">2</td>
+                    <td onclick="escribir(this)" name="3">3</td>
+                </tr>
+                <tr>
+                    <td onclick="escribir(this)" name="4">4</td>
+                    <td onclick="escribir(this)" name="5">5</td>
+                    <td onclick="escribir(this)" name="6">6</td>
+                </tr>
+                <tr>
+                    <td onclick="escribir(this)" name="7">7</td>
+                    <td onclick="escribir(this)" name="8">8</td>
+                    <td onclick="escribir(this)" name="9">9</td>
+                </tr>
+                <tr>
+                    <td onclick="borrar()" name="del">Del</td>
+                    <td onclick="escribir(this)" name="0">0</td>
+                    <td onclick="limpiar()">AC</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+<script>
+    function escribir(valor){
+        var num = valor.getAttribute("name");
+        document.getElementById("password").value += num;
+
+    }
+
+    function borrar(){
+        
+        var password = document.getElementById("password");
+        password.value = password.value.slice(0, -1);
+
+    }
+
+    function limpiar(){
+        document.getElementById("password").value = "";
+    }
+
+    function mostrar(){
+        if(document.getElementById("ver").innerHTML === "Mostrar"){
+            document.getElementById("password").type = "Text";
+            document.getElementById("ver").innerHTML = "Ocultar";
+        }else{
+            document.getElementById("password").type = "password";
+            document.getElementById("ver").innerHTML = "Mostrar";
+        }
+        
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LISTA DE UTILES</h1>
+    <label>Utiles: </label>
+    <input type="text" id="utiles" name="utiles">
+    <button id="button">Añadir</button>
+    <button id="button_borrar">Borrar</button>
+    <ul id="lista"></ul>
+
+
+    <script>
+        document.getElementById("button").addEventListener('click', function(){
+            var elemento = document.createElement("li");
+            const utiles = document.getElementById('utiles').value;
+            elemento.innerHTML = utiles;
+            document.getElementById('lista').appendChild(elemento);
+        });
+
+        
+        document.getElementById("button_borrar").addEventListener('click', function(){
+            document.getElementById('lista').innerHTML='';
+        });
+    </script>
+</body>
+</html>
