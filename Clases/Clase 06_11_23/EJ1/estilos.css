@@ -1,0 +1,27 @@
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.cont1:hover{
+    cursor: pointer;
+}
+
+.cont4, .cont5{
+    margin: 5px;
+}

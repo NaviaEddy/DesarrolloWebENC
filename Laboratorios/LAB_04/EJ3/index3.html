@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos3.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 3</h1>
+
+    <div class="content1">
+        <input type="text" id="nuevoElemento" placeholder="Ingrese un elemento">
+        <button onclick="agregarElemento()">Añadir</button>
+    </div>
+    
+
+    <ul id="listaCompras"></ul>
+
+    <script>
+        function agregarElemento() {
+            
+            var nuevoElemento = document.getElementById("nuevoElemento").value.trim();
+
+            if (nuevoElemento !== "") {
+               
+                var lista = document.getElementById("listaCompras");
+                var elementoLista = document.createElement("li");
+                elementoLista.textContent = nuevoElemento;
+
+                if (nuevoElemento.toLowerCase().includes("de")) {
+                    elementoLista.style.backgroundColor = "yellow";
+                }
+
+                lista.appendChild(elementoLista);
+
+                document.getElementById("nuevoElemento").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
+

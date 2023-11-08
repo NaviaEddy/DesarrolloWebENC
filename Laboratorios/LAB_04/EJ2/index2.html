@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos2.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 2</h1>
+
+    <img id="imagen" src="./content/clinica-dental-en-a-estrada.jpg" alt="Imagen" width="700px">
+
+    <label for="tamano">Tamaño: </label>
+    <input type="number" id="tamano">
+
+    <div class="button-container">
+        <button onclick="agrandarImagen()" class="button1">Agrandar</button>
+        <button onclick="reducirImagen()" class="button2">Reducir</button>
+    </div>
+
+    <script>
+
+        var imagen = document.getElementById("imagen");
+        var tamanoInput = document.getElementById("tamano");
+        tamanoInput.value = imagen.width;
+
+        function agrandarImagen() {
+            var imagen = document.getElementById("imagen");
+            var tamano = parseInt(document.getElementById("imagen").width);
+            var tamanoInput = document.getElementById("tamano");
+            tamano += 10;
+            imagen.style.width = tamano + "px";
+            tamanoInput.value = tamano;
+        }
+
+        function reducirImagen() {
+            var imagen = document.getElementById("imagen");
+            var tamano = parseInt(document.getElementById("imagen").width);
+            var tamanoInput = document.getElementById("tamano");
+            tamano -= 10;
+            imagen.style.width = tamano + "px";
+            tamanoInput.value = tamano;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

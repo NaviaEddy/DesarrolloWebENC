@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos4.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejercicio 4</h1>
+    <ul>
+        <li><a href="javascript:cargarContenido('login.html')">Login</a></li>
+    </ul>
+
+    <div id="formulario"></div>
+    
+    <div id="mensaje"></div>
+
+    <script>
+        function cargarContenido(abrir) {
+            var contenedor;
+            contenedor = document.getElementById('formulario');
+            fetch(abrir)
+                .then(response => response.text())
+                .then(data => contenedor.innerHTML = data);
+        }
+
+
+        function autenticar() {
+            const usuario = document.getElementById("usuario").value;
+            const contrasena = parseInt(document.getElementById("contrasena").value);
+
+            fetch('autenticar.php', {
+                method: 'POST',
+                body: `usuario=${usuario}&contrasena=${contrasena}`,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            .then(response => response.text())
+            .then(data => {
+                var mensaje = document.getElementById("mensaje");
+
+                if (data === "autenticado") {
+                    mensaje.textContent = "Autenticado correctamente";
+                    mensaje.style.color = "white";
+                    mensaje.style.backgroundColor = "green";
+                } else {
+                    mensaje.textContent = "No autenticado";
+                    mensaje.style.color = "white";
+                    mensaje.style.backgroundColor = "red";
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+
+</html>
