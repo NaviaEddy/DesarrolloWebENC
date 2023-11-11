@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container_text">
+            <div class="cont1" id="principal"></div>
+            <div class="cont2" id="menu"></div>
+        </div>
+        <div class="container_down">
+            <div class="container_text2">
+                <div class="cont4">
+                    <li><a href='javascript:cargarContenido1("botones.html")' class="button">Menu</a></li>
+                </div>
+                <div class="cont3" id="mensaje"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function cargarContenido1(abrir) {
+            contenedor = document.getElementById('menu');
+            contenedor2 = document.getElementById('principal');
+            text = document.getElementById('mensaje')
+            text.innerHTML = "";
+            contenedor2.innerHTML = "";
+            contenedor.innerHTML = "";
+            var ajax = new XMLHttpRequest() //crea el objetov ajax 
+            ajax.open("get", abrir, true);
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4) {
+                    contenedor.innerHTML = ajax.responseText;
+                    text.innerHTML = "Navia Condori Eddy - CU: 111-484";
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
+            ajax.send();
+        }
+
+        function cargarContenido2(abrir){
+            var contenedor;
+            contenedor = document.getElementById('menu');
+            contenedor.innerHTML = "";
+            fetch(abrir)
+                .then(response => response.text())
+                .then(data => contenedor.innerHTML=data);
+        }
+
+        function cargarImagen(nombre) {
+
+            imagen = document.getElementById('principal');
+            imagen.innerHTML = "";
+            imagen.innerHTML = `<img src="http://localhost/DesarrolloWebENC/SegundoParcial/images/${nombre}" style="width: 500px; height: 500px;">`
+        
+            mensaje = document.getElementById('mensaje')
+            mensaje.innerText = "";
+            mensaje.innerHTML = nombre;
+        }
+
+        function cargarContenido3(abrir) {
+            contenedor = document.getElementById('menu');
+            contenedor2 = document.getElementById('principal');
+            text = document.getElementById('mensaje')
+            text.innerHTML = "";
+            contenedor2.innerHTML = "";
+            contenedor.innerHTML = "";
+            var ajax = new XMLHttpRequest() //crea el objetov ajax 
+            ajax.open("get", abrir, true);
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4) {
+                    contenedor.innerHTML = ajax.responseText;
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
+            ajax.send();
+        }
+
+        var libros; 
+        function cargarContenido5(abrir) {
+            var contenedor = document.getElementById('menu');
+            var contenedor2 = document.getElementById('principal');
+            var text = document.getElementById('mensaje');
+            text.innerHTML = "";
+            contenedor2.innerHTML = "";
+            contenedor.innerHTML = "";
+            
+            var ajax = new XMLHttpRequest();
+            ajax.open("get", abrir, true);
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4) {
+                    libros = JSON.parse(ajax.responseText);
+        
+                    var selectHtml = "<label for='librosSelect'>Selecciona un libro:</label>";
+                    selectHtml += "<select id='librosSelect' onchange='mostrarImagen2()'>";
+        
+                    libros.forEach(function (libro) {
+                        selectHtml += "<option value='" + libro.id + "'>" + libro.titulo + "</option>";
+                    });
+        
+                    selectHtml += "</select>";
+                    contenedor2.innerHTML = selectHtml;
+        
+                    var contenedor2Html = "<div id='imagenLibro'></div>";
+                    contenedor2.innerHTML += contenedor2Html;
+        
+
+                    mostrarImagen2();
+                }
+            }
+            ajax.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+            ajax.send();
+        }
+        
+        function mostrarImagen2() {
+            var select = document.getElementById("librosSelect");
+            var imagenDiv = document.getElementById("imagenLibro");
+            var selectedLibroId = select.value;
+            var selectedLibro = libros.find(libro => libro.id == selectedLibroId);
+
+            if (selectedLibro) {
+                imagenDiv.innerHTML = "<img src='" + selectedLibro.imagen + "' width='200px'>";
+            }
+        }
+        
+        
+    </script>
+
+
+
+</body>
+</html>
+
+</body>
+
+</html>
