@@ -64,17 +64,14 @@
         }
 
         function cargarContenido3(abrir) {
-            contenedor = document.getElementById('menu');
+          
             contenedor2 = document.getElementById('principal');
-            text = document.getElementById('mensaje')
-            text.innerHTML = "";
             contenedor2.innerHTML = "";
-            contenedor.innerHTML = "";
             var ajax = new XMLHttpRequest() //crea el objetov ajax 
             ajax.open("get", abrir, true);
             ajax.onreadystatechange = function () {
                 if (ajax.readyState == 4) {
-                    contenedor.innerHTML = ajax.responseText;
+                    contenedor2.innerHTML = ajax.responseText;
                 }
             }
             ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
